@@ -18,7 +18,13 @@ namespace secondLab_1ex
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show(Logic.CalcTrainLocation(
+                int.Parse(tAHBox.Text), 
+                int.Parse(tAMBox.Text), 
+                int.Parse(tDHBox.Text),
+                int.Parse(tDMBox.Text), 
+                int.Parse(hHBox.Text), 
+                int.Parse(hMBox.Text)));
         }
 
         private void tAMBox_TextChanged(object sender, EventArgs e)
