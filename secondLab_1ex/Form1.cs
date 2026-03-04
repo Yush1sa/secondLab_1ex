@@ -18,13 +18,20 @@ namespace secondLab_1ex
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(Logic.CalcTrainLocation(
-                int.Parse(tAHBox.Text), 
-                int.Parse(tAMBox.Text), 
+            try
+            {
+                MessageBox.Show(Logic.CalcTrainLocation(
+                int.Parse(tAHBox.Text),
+                int.Parse(tAMBox.Text),
                 int.Parse(tDHBox.Text),
-                int.Parse(tDMBox.Text), 
-                int.Parse(hHBox.Text), 
+                int.Parse(tDMBox.Text),
+                int.Parse(hHBox.Text),
                 int.Parse(hMBox.Text)));
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Ты ввёл что то не правильно ;(");
+            }
         }
 
         private void tAMBox_TextChanged(object sender, EventArgs e)
